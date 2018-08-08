@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { HashRouter } from 'react-router-dom';
 import { Router, createHashHistory } from 'history';
-import { BrowserHistory } from "react-history";
+//import { BrowserHistory } from "react-history";
 import createBrowserHistory from 'history/createBrowserHistory';
 
 // const history = createHashHistory({

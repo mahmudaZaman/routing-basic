@@ -12,6 +12,12 @@ import User from './components/user';
 
 class App extends Component {
   render() {
+   
+      const FadingRoute = ({ component: Component, ...rest }) => (
+      <Route {...rest} render={props => (
+        <Component {...props} />
+      )} />)
+    
     return (
       <div className="App">
         <Navigation />
@@ -25,6 +31,8 @@ class App extends Component {
             // <Redirect from='/common' to='/contact' />
           )} />
           <Route path="/user/:username" component={User}/>
+          <Route path="/home" render={() => <div>Home test</div>}/>
+          <FadingRoute path="/cool" component={Common}/>
           <Route component={Error} />
         </Switch>
       </div>
