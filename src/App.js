@@ -8,21 +8,24 @@ import Contact from './components/contact';
 import Error from './components/error';
 import Navigation from './components/navigation';
 import Common from './components/common';
+import User from './components/user';
 
-class App extends Component { 
+class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation/>
+        <Navigation />
         <Switch>
-          <Route path="/" component={Home} exact/>
-          <Route path="/about" component={About}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/common" component={Common}/>
+          <Route path="/" component={Home} exact />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/common" component={Common} />
           <Route exact path="/random-path" render={() => (
-              <Redirect to="/common"/>
-          )}/>
-          <Route component={Error}/>
+            <Redirect to="/common" />
+            // <Redirect from='/common' to='/contact' />
+          )} />
+          <Route path="/user/:username" component={User}/>
+          <Route component={Error} />
         </Switch>
       </div>
     );
