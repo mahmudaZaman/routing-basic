@@ -13,7 +13,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 //     queryKey: false
 // })
 const history = createBrowserHistory({
-    forceRefresh : false
+    forceRefresh: false
 });
 const location = history.location;
 console.log("location", location);

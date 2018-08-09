@@ -12,12 +12,15 @@ import User from './components/user';
 
 class App extends Component {
   render() {
-   
-      const FadingRoute = ({ component: Component, ...rest }) => (
+    const FadingRoute = ({ component: Component, ...rest }) => {
+      console.log('getting rest properties', rest);
+      console.log('getting Component', Component);
+      return(
       <Route {...rest} render={props => (
-        <Component {...props} />
+        <Component {...props} >testing hello</Component>
       )} />)
-    
+    }
+
     return (
       <div className="App">
         <Navigation />
